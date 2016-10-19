@@ -68,10 +68,12 @@ class TopicsTableViewController: UITableViewController, XMLParserDelegate {
      override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let dictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
         let tutorialLink = dictionary["link"]
+        let pubDate = dictionary["pubDate"]
         
         let tutorialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("idTutorialViewController") as! TutorialViewController
         
         tutorialViewController.tutorialURL = NSURL(string: tutorialLink!)
+        tutorialViewController.publishDate = pubDate
         
         showDetailViewController(tutorialViewController, sender: self)
         

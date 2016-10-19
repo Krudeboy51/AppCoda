@@ -17,6 +17,7 @@
 		946647561DB7D03C00009E89 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946647551DB7D03C00009E89 /* TutorialViewController.swift */; };
 		946647581DB7D04E00009E89 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946647571DB7D04E00009E89 /* ContainerViewController.swift */; };
 		9466475A1DB7D05F00009E89 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946647591DB7D05F00009E89 /* XMLParser.swift */; };
+		946647A01DB8116300009E89 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466479F1DB8116300009E89 /* PopoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		946647551DB7D03C00009E89 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		946647571DB7D04E00009E89 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		946647591DB7D05F00009E89 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		9466479F1DB8116300009E89 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				946647551DB7D03C00009E89 /* TutorialViewController.swift */,
 				946647571DB7D04E00009E89 /* ContainerViewController.swift */,
 				946647591DB7D05F00009E89 /* XMLParser.swift */,
+				9466479F1DB8116300009E89 /* PopoverViewController.swift */,
 			);
 			path = AppCodaAssignment;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				9466475A1DB7D05F00009E89 /* XMLParser.swift in Sources */,
 				946647581DB7D04E00009E89 /* ContainerViewController.swift in Sources */,
 				946647561DB7D03C00009E89 /* TutorialViewController.swift in Sources */,
+				946647A01DB8116300009E89 /* PopoverViewController.swift in Sources */,
 				946647261DB7CD8800009E89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -63,6 +63,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pubDateButtonItem" destination="emq-Ss-qrG" id="MOU-xh-Fvn"/>
                         <outlet property="toobar" destination="BEH-PV-aFA" id="oCh-Ze-xXm"/>
                         <outlet property="webview" destination="pRT-0b-WyV" id="bBh-Zq-1ii"/>
                     </connections>
