@@ -8,8 +8,10 @@
 
 import UIKit
 
-class TopicsTableViewController: UITableViewController {
+class TopicsTableViewController: UITableViewController, XMLParserDelegate {
 
+    var xmlParser: XMLParser
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +37,10 @@ class TopicsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    
+    func parsingWasFinished() {
+        self.tableView.reloadData()
     }
 
     /*

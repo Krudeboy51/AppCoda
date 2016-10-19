@@ -9,6 +9,11 @@
 import UIKit
 
 class TutorialViewController: UIViewController {
+    
+    @IBOutlet weak var webview: UIWebView!
+    @IBOutlet weak var toobar: UIToolbar!
+    @IBOutlet weak var pubDateButtonItem: UIBarButtonItem!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +27,8 @@ class TutorialViewController: UIViewController {
     }
     
 
+    @IBAction func showPublishDate(sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 
