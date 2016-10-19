@@ -10,7 +10,7 @@
         <scene sceneID="GOR-3c-Zpu">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Olp-W5-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="zWM-H0-MCT" customClass="TutorialViewController" customModule="AppCodaAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="idTutorialViewController" id="zWM-H0-MCT" customClass="TutorialViewController" customModule="AppCodaAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sYm-dd-INZ"/>
                         <viewControllerLayoutGuide type="bottom" id="fUx-dX-N1e"/>
@@ -63,7 +63,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pubDateButtonItem" destination="emq-Ss-qrG" id="gyF-QE-xbg"/>
                         <outlet property="toobar" destination="BEH-PV-aFA" id="oCh-Ze-xXm"/>
                         <outlet property="webview" destination="pRT-0b-WyV" id="bBh-Zq-1ii"/>
                     </connections>
@@ -129,7 +128,7 @@
         <scene sceneID="7xC-8W-COQ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPR-l5-G0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <splitViewController id="s0d-mn-n34" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="idSplitViewController" id="s0d-mn-n34" sceneMemberID="viewController">
                     <connections>
                         <segue destination="a46-1R-zOQ" kind="relationship" relationship="masterViewController" id="Jrj-7C-0X1"/>
                         <segue destination="zWM-H0-MCT" kind="relationship" relationship="detailViewController" id="2Ol-m8-SgZ"/>

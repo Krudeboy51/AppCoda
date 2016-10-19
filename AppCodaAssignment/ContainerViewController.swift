@@ -29,9 +29,21 @@ class ContainerViewController: UIViewController {
         self.addChildViewController(viewController)
         self.view.addSubview(viewController.view)
         viewController.didMoveToParentViewController(self)
-        
+        self.setOverrideTraitCollection(UITraitCollection(horizontalSizeClass: UIUserInterfaceSizeClass.Regular), forChildViewController: viewController)
     }
     
+  
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        
+        if size.width > size.height{
+            self.setOverrideTraitCollection(UITraitCollection(horizontalSizeClass: UIUserInterfaceSizeClass.Regular), forChildViewController: viewController)
+        }
+        else{
+            self.setOverrideTraitCollection(nil, forChildViewController: viewController)
+        }
+        
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    }
 
     /*
     // MARK: - Navigation
