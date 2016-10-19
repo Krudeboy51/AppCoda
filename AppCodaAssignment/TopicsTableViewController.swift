@@ -10,10 +10,16 @@ import UIKit
 
 class TopicsTableViewController: UITableViewController, XMLParserDelegate {
 
-    var xmlParser: XMLParser
+    var xmlParser: XMLParser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = NSURL(string: "http://feeds.feedburner.com/appcoda")!
+        xmlParser = XMLParser()
+        xmlParser.delegate = self
+        xmlParser.startParsingWithContentOfURL(url)
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,27 +37,45 @@ class TopicsTableViewController: UITableViewController, XMLParserDelegate {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return xmlParser.arrParsedData.count
     }
     
     func parsingWasFinished() {
         self.tableView.reloadData()
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("idCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let currentDictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
+        
+        cell.textLabel?.text = currentDictionary["title"]
 
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
+    }
+    
+
+     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let dictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
+        let tutorialLink = dictionary["link"]
+        
+        let tutorialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("idTutorialViewController") as! TutorialViewController
+        
+        tutorialViewController.tutorialURL = NSURL(string: tutorialLink!)
+        
+        showDetailViewController(tutorialViewController, sender: self)
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

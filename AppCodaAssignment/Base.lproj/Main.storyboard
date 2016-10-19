@@ -9,6 +9,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="GOR-3c-Zpu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Olp-W5-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="zWM-H0-MCT" customClass="TutorialViewController" customModule="AppCodaAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sYm-dd-INZ"/>
@@ -67,13 +68,13 @@
                         <outlet property="webview" destination="pRT-0b-WyV" id="bBh-Zq-1ii"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Olp-W5-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="780" y="1401"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="e5i-pD-9qi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcb-oq-zsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="9UW-OF-rdf" customClass="TopicsTableViewController" customModule="AppCodaAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kPE-dv-qUr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -105,13 +106,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="7gx-A9-HnO"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bcb-oq-zsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1688" y="498"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="if7-Og-nPR">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUa-ji-KXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="a46-1R-zOQ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="29E-Mi-bvZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -121,20 +122,19 @@
                         <segue destination="9UW-OF-rdf" kind="relationship" relationship="rootViewController" id="XVn-9y-lkE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vUa-ji-KXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="780" y="498"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="7xC-8W-COQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPR-l5-G0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <splitViewController id="s0d-mn-n34" sceneMemberID="viewController">
                     <connections>
                         <segue destination="a46-1R-zOQ" kind="relationship" relationship="masterViewController" id="Jrj-7C-0X1"/>
                         <segue destination="zWM-H0-MCT" kind="relationship" relationship="detailViewController" id="2Ol-m8-SgZ"/>
                     </connections>
                 </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LPR-l5-G0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-302" y="966"/>
         </scene>

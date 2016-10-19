@@ -10,14 +10,18 @@ import UIKit
 
 class TutorialViewController: UIViewController {
     
+    var tutorialURL : NSURL!
+    
     @IBOutlet weak var webview: UIWebView!
     @IBOutlet weak var toobar: UIToolbar!
-    @IBOutlet weak var pubDateButtonItem: UIBarButtonItem!
+  //  @IBOutlet weak var pubDateButtonItem: UIBarButtonItem!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        webview.hidden = true
+        toobar.hidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -26,9 +30,26 @@ class TutorialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if tutorialURL != nil {
+            let request : NSURLRequest = NSURLRequest(URL: tutorialURL)
+            webview.loadRequest(request)
+            
+            if webview.hidden {
+                webview.hidden = false
+                toobar.hidden = false
+            }
+        }
+    }
+    
 
     @IBAction func showPublishDate(sender: AnyObject) {
+        
     }
+    
+    
     /*
     // MARK: - Navigation
 

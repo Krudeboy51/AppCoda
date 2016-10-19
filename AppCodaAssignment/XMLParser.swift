@@ -32,7 +32,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     }
     
     func parser(parser: NSXMLParser, foundCharacters string: String) {
-        if (currentElement == "title" && currentElement != "Appcoda") || currentElement == "link" || currentElement == "pubDate"{
+        if (currentElement == "title" && foundCharacters != "Appcoda") || currentElement == "link" || currentElement == "pubDate"{
             foundCharacters += string
         }
     }

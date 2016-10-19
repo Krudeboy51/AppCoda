@@ -9,6 +9,8 @@
 import UIKit
 
 class ContainerViewController: UIViewController {
+    
+    var viewController : UISplitViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,15 @@ class ContainerViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setEmbeddedViweController(splitViewController: UISplitViewController){
+        
+        viewController = splitViewController
+        self.addChildViewController(viewController)
+        self.view.addSubview(viewController.view)
+        viewController.didMoveToParentViewController(self)
+        
     }
     
 
